@@ -1,0 +1,51 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.3.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework:springloaded:1.2.8.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+fileTree(dir: 'gradle/gradlePlugin', includes: ['*.gradle']).each { apply from: it }
+
+repositories {
+	mavenCentral()
+}
+
+ext{
+    versions = [
+            dbflute : '1.1.8',
+            springJdbc : '5.0.7.RELEASE'
+    ]
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
+    //compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+	compileOnly "org.projectlombok:lombok:1.16.16"
+    compile("org.dbflute:dbflute-runtime:${versions.dbflute}")
+    compile("org.springframework:spring-jdbc:${versions.springJdbc}")
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.0'
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.0'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+
+//ext['thymeleaf.version'] = '3.0.2.RELEASE'
+//ext['thymeleaf-layout-dialect.version'] = '2.1.1'
+//jar.baseName = 'thymeleaf'

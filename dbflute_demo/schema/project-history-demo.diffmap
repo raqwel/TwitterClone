@@ -1,0 +1,164 @@
+map:{
+    ; 2018/07/11 21:11:54 = map:{
+        ; diffDate = 2018/07/11 21:11:54
+        ; diffAuthor = raqwel
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; PASSWORD = map:{
+                        ; columnName = PASSWORD
+                        ; diffType = ADD
+                    }
+                }
+            }
+        }
+    }
+    ; 2018/07/08 19:39:25 = map:{
+        ; diffDate = 2018/07/08 19:39:25
+        ; diffAuthor = raqwel
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; MAIL_ADDRESS = map:{
+                        ; columnName = MAIL_ADDRESS
+                        ; diffType = CHANGE
+                        ; columnSizeDiff = map:{
+                            ; next = 255
+                            ; previous = 256
+                        }
+                    }
+                    ; PROFILE_SENTENCE = map:{
+                        ; columnName = PROFILE_SENTENCE
+                        ; diffType = CHANGE
+                        ; columnSizeDiff = map:{
+                            ; next = 200
+                            ; previous = 300
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2018/07/08 19:12:41 = map:{
+        ; diffDate = 2018/07/08 19:12:41
+        ; tableCount = map:{
+            ; next = 6
+            ; previous = 7
+        }
+        ; diffAuthor = raqwel
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; USER_STATUS_CODE = map:{
+                        ; columnName = USER_STATUS_CODE
+                        ; diffType = DELETE
+                    }
+                }
+            }
+            ; USER_STATUS = map:{
+                ; tableName = USER_STATUS
+                ; diffType = DELETE
+            }
+        }
+    }
+    ; 2018/07/08 17:31:34 = map:{
+        ; diffDate = 2018/07/08 17:31:34
+        ; diffAuthor = raqwel
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; USER_STATUS_CODE = map:{
+                        ; columnName = USER_STATUS_CODE
+                        ; diffType = ADD
+                    }
+                    ; USER_STATUS = map:{
+                        ; columnName = USER_STATUS
+                        ; diffType = DELETE
+                    }
+                }
+                ; foreignKeyDiff = map:{
+                    ; FK_USER_USER_STATUS = map:{
+                        ; constraintName = FK_USER_USER_STATUS
+                        ; diffType = DELETE
+                    }
+                }
+                ; indexDiff = map:{
+                    ; FK_USER_USER_STATUS = map:{
+                        ; constraintName = FK_USER_USER_STATUS
+                        ; diffType = DELETE
+                    }
+                }
+            }
+            ; USER_STATUS = map:{
+                ; tableName = USER_STATUS
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; USER_STATUS_CODE = map:{
+                        ; columnName = USER_STATUS_CODE
+                        ; diffType = ADD
+                    }
+                    ; USER_STATUS_ID = map:{
+                        ; columnName = USER_STATUS_ID
+                        ; diffType = DELETE
+                    }
+                }
+                ; primaryKeyDiff = map:{
+                    ; PRIMARY = map:{
+                        ; constraintName = PRIMARY
+                        ; diffType = CHANGE
+                        ; columnDiff = map:{
+                            ; next = USER_STATUS_CODE
+                            ; previous = USER_STATUS_ID
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2018/07/08 17:00:05 = map:{
+        ; diffDate = 2018/07/08 17:00:05
+        ; tableCount = map:{
+            ; next = 7
+            ; previous = 0
+        }
+        ; diffAuthor = raqwel
+        ; tableDiff = map:{
+            ; FAVOLITE = map:{
+                ; tableName = FAVOLITE
+                ; diffType = ADD
+            }
+            ; FOLLOW = map:{
+                ; tableName = FOLLOW
+                ; diffType = ADD
+            }
+            ; REPLY = map:{
+                ; tableName = REPLY
+                ; diffType = ADD
+            }
+            ; RETWEET = map:{
+                ; tableName = RETWEET
+                ; diffType = ADD
+            }
+            ; TWEET = map:{
+                ; tableName = TWEET
+                ; diffType = ADD
+            }
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = ADD
+            }
+            ; USER_STATUS = map:{
+                ; tableName = USER_STATUS
+                ; diffType = ADD
+            }
+        }
+    }
+}
