@@ -1,0 +1,66 @@
+map:{
+    ; 2018/07/14 20:50:14 = map:{
+        ; diffDate = 2018/07/14 20:50:14
+        ; diffAuthor = raqwel
+        ; diffGitBranch = Register
+        ; tableDiff = map:{
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; MAIL_ADDRESS = map:{
+                        ; columnName = MAIL_ADDRESS
+                        ; diffType = CHANGE
+                        ; notNullDiff = map:{
+                            ; next = false
+                            ; previous = true
+                        }
+                    }
+                    ; PROFILE_SENTENCE = map:{
+                        ; columnName = PROFILE_SENTENCE
+                        ; diffType = CHANGE
+                        ; notNullDiff = map:{
+                            ; next = false
+                            ; previous = true
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2018/07/14 20:34:04 = map:{
+        ; diffDate = 2018/07/14 20:34:04
+        ; tableCount = map:{
+            ; next = 6
+            ; previous = 0
+        }
+        ; diffAuthor = raqwel
+        ; diffGitBranch = Register
+        ; tableDiff = map:{
+            ; FAVOLITE = map:{
+                ; tableName = FAVOLITE
+                ; diffType = ADD
+            }
+            ; FOLLOW = map:{
+                ; tableName = FOLLOW
+                ; diffType = ADD
+            }
+            ; REPLY = map:{
+                ; tableName = REPLY
+                ; diffType = ADD
+            }
+            ; RETWEET = map:{
+                ; tableName = RETWEET
+                ; diffType = ADD
+            }
+            ; TWEET = map:{
+                ; tableName = TWEET
+                ; diffType = ADD
+            }
+            ; USER = map:{
+                ; tableName = USER
+                ; diffType = ADD
+            }
+        }
+    }
+}
