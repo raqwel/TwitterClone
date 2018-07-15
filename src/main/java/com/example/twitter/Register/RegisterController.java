@@ -3,6 +3,7 @@ package com.example.twitter.Register;
 import com.example.twitter.dbflute.exbhv.UserBhv;
 import com.example.twitter.dbflute.exentity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,7 +19,10 @@ public class RegisterController {
     @Autowired
     private UserBhv userBhv;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(RegisterForm form, Model model) {
 
         return "Register/index";
@@ -32,9 +36,9 @@ public class RegisterController {
 
         User user = new User();
         user.setUserName(form.getUserName());
-        user.setPassword(form.getPassword());
+        user.setPassword(passwordEncoder.encode(form.getPassword()));
         userBhv.insert(user);
 
-        return "Register/success";
+        return "redirect:/login/doLogin";
     }
 }

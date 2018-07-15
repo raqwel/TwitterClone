@@ -21,13 +21,11 @@ public class helloFilter extends OncePerRequestFilter {
 
     @Override
     protected void initFilterBean() throws ServletException {
-        logger.info("Init!!!!");
         super.initFilterBean();
     }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        logger.info("doFilter!!!!!!!!");
 
         if (AccessContext.isExistAccessContextOnThread()) {
             // 既に設定されていたら何もしないで次へ

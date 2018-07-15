@@ -19,7 +19,7 @@ map:{
     ; url      = jdbc:mysql://localhost:3306/twitter
     ; schema   =
     ; user     = raqwel
-    ; password = wildarms
+    ; password = demo
 
     # /- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # o propertiesMap: (NotRequired - Default map:{})

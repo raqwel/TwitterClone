@@ -37,8 +37,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
 	compile("org.springframework.boot:spring-boot-starter-jdbc:${springBootVersion}")
+	compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
     //compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
-	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+	compile("mysql:mysql-connector-java:8.0.11")
 	compileOnly "org.projectlombok:lombok:1.16.16"
     compile("org.dbflute:dbflute-runtime:${versions.dbflute}")
     compile("org.springframework:spring-jdbc:${versions.springJdbc}")

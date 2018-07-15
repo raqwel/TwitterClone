@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body>
-<h1>Register Page</h1>
-登録ページ<br>
-<form method="post" th:object="${registerForm}" action="/doRegister">
-    <div id="register">
+<h1>Login Page</h1>
+ログインページ<br>
+<form method="post" th:object="${loginForm}" action="/doLogin">
+    <div id="login">
         ID
         <input type="text" name="userName">
         <span th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"></span>
@@ -19,10 +19,8 @@
         <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
         <br>
 
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
     </div>
 </form>
-
-<a href="/login">ログインページ</a>
 </body>
 </html>

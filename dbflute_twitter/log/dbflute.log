@@ -10396,3 +10396,535 @@ _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
     repsEnvType      = ut
     refreshProject   = $$AutoDetect$$
 _/_/_/_/_/_/_/_/_/_/ {Sql2Entity}
+2018-07-15 22:17:04,491 [main] INFO  (DfReplaceSchemaTask#begin():92) - +------------------------------------------+
+2018-07-15 22:17:04,494 [main] INFO  (DfReplaceSchemaTask#begin():93) - |                                          |
+2018-07-15 22:17:04,494 [main] INFO  (DfReplaceSchemaTask#begin():94) - |              ReplaceSchema               |
+2018-07-15 22:17:04,499 [main] INFO  (DfReplaceSchemaTask#begin():102) - |                                          |
+2018-07-15 22:17:04,499 [main] INFO  (DfReplaceSchemaTask#begin():103) - +------------------------------------------+
+2018-07-15 22:17:04,500 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():401) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2018-07-15 22:17:06,276 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2018-07-15 22:17:06,277 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2018-07-15 22:17:06,277 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/twitter
+2018-07-15 22:17:06,277 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = raqwel
+2018-07-15 22:17:06,286 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2018-07-15 22:17:06,594 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.40
+2018-07-15 22:17:06,594 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e ) for JDBC 4.0
+2018-07-15 22:17:06,606 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():229) - 
+2018-07-15 22:17:06,607 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():230) - * * * * * * * * * * *
+2018-07-15 22:17:06,607 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():231) - *                   *
+2018-07-15 22:17:06,608 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():232) - * Initialize Schema *
+2018-07-15 22:17:06,608 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():233) - *                   *
+2018-07-15 22:17:06,608 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():234) - * * * * * * * * * * *
+2018-07-15 22:17:06,622 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2018-07-15 22:17:06,622 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {twitter.$$NoNameSchema$$ as main}
+2018-07-15 22:17:06,623 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2018-07-15 22:17:06,701 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table FAVOLITE
+2018-07-15 22:17:06,719 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table FOLLOW
+2018-07-15 22:17:06,734 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table REPLY
+2018-07-15 22:17:06,744 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table RETWEET
+2018-07-15 22:17:06,767 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FAVOLITE drop foreign key FK_FAVOLITE_TWEET
+2018-07-15 22:17:06,781 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FAVOLITE drop foreign key FK_FAVOLITE_USER
+2018-07-15 22:17:06,797 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FOLLOW drop foreign key FK_FOLLOWEE_USER
+2018-07-15 22:17:06,805 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FOLLOW drop foreign key FK_FOLLOWER_USER
+2018-07-15 22:17:06,815 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYEE_USER
+2018-07-15 22:17:06,824 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYEE_TWEET
+2018-07-15 22:17:06,833 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYER_USER
+2018-07-15 22:17:06,840 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYER_TWEET
+2018-07-15 22:17:06,856 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table RETWEET drop foreign key FK_RETWEET_TWEET
+2018-07-15 22:17:06,870 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table RETWEET drop foreign key FK_RETWEET_USER
+2018-07-15 22:17:06,889 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table TWEET drop foreign key FK_TWEET_USER
+2018-07-15 22:17:06,908 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table FAVOLITE
+2018-07-15 22:17:06,915 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table FOLLOW
+2018-07-15 22:17:06,921 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table REPLY
+2018-07-15 22:17:06,926 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table RETWEET
+2018-07-15 22:17:06,930 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table TWEET
+2018-07-15 22:17:06,934 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table USER
+2018-07-15 22:17:06,962 [main] INFO  (DfCreateSchemaProcess#createSchema():266) - 
+2018-07-15 22:17:06,962 [main] INFO  (DfCreateSchemaProcess#createSchema():267) - * * * * * * * * *
+2018-07-15 22:17:06,962 [main] INFO  (DfCreateSchemaProcess#createSchema():268) - *               *
+2018-07-15 22:17:06,963 [main] INFO  (DfCreateSchemaProcess#createSchema():269) - * Create Schema *
+2018-07-15 22:17:06,963 [main] INFO  (DfCreateSchemaProcess#createSchema():270) - *               *
+2018-07-15 22:17:06,963 [main] INFO  (DfCreateSchemaProcess#createSchema():271) - * * * * * * * * *
+2018-07-15 22:17:06,969 [main] INFO  (DfSqlFileFireMan#fire():68) - ...Firing: replace-schema.sql
+2018-07-15 22:17:06,972 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Tables */
+
+CREATE TABLE FAVOLITE
+(
+	FAVOLITE_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'お気に入りID : お気に入りID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+',
+	TWEET_ID BIGINT NOT NULL COMMENT 'ツイートID : お気に入りしたツイートID
+',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : お気に入りした時間',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時
+',
+	PRIMARY KEY (FAVOLITE_ID)
+) COMMENT = 'お気に入り'
+2018-07-15 22:17:06,996 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE FOLLOW
+(
+	FOLLOW_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'フォローID : フォローID',
+	FOLLOWEE_ID BIGINT NOT NULL COMMENT 'フォロイーID : フォロイーID
+フォローする人の会員IDが入る
+',
+	FOLLOWER_ID BIGINT NOT NULL COMMENT 'フォロワーID : フォロワーID
+フォローされる人のIDが入る',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+フォローされているかをT / Fで判定する
+',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : フォローした日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (FOLLOW_ID),
+	CONSTRAINT UQ_NEW_TABLE_XXX UNIQUE (FOLLOWEE_ID, FOLLOWER_ID)
+) COMMENT = 'フォロー'
+2018-07-15 22:17:07,077 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE REPLY
+(
+	REPLY_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'リプライID : リプライID',
+	REPLYEE_ID BIGINT NOT NULL COMMENT 'リプライした会員ID : リプライした会員ID
+',
+	REPLYER_ID BIGINT NOT NULL COMMENT 'リプライされた会員ID : リプライされた会員のID',
+	REPLYEE_TWEET_ID BIGINT NOT NULL COMMENT 'リプライしたツイートID : リプライしたツイートのID
+',
+	REPLYER_TWEET_ID BIGINT NOT NULL COMMENT 'リプライされたツイートID : リプライされたツイートのID',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : リプライした日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (REPLY_ID)
+) COMMENT = 'リプライ'
+2018-07-15 22:17:07,095 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE RETWEET
+(
+	RETWEET_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'リツイートID : リツイートID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+リツイートする人の会員IDが入る
+',
+	TWEET_ID BIGINT NOT NULL COMMENT 'ツイートID : ツイートID
+リツイートされるツイートIDが格納される',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+リツイートしたかどうかを見る
+一回リツイートして辞めてもう一回リツイートをするときにTにして表示できるようにする
+',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : 登録日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (RETWEET_ID),
+	CONSTRAINT UQ_NEW_TABLE_XXX UNIQUE (USER_ID, TWEET_ID)
+) COMMENT = 'リツイート'
+2018-07-15 22:17:07,198 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE TWEET
+(
+	TWEET_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'ツイートID : ツイートID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+',
+	TWEET VARCHAR(140) NOT NULL COMMENT 'ツイート : ツイート
+140文字制限されているので最大長140に設定',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : ツイートした時間',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (TWEET_ID)
+) COMMENT = 'ツイート'
+2018-07-15 22:17:07,207 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE USER
+(
+	USER_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT '会員ID : 会員ID',
+	USER_NAME VARCHAR(64) NOT NULL COMMENT '会員名称 : 会員名称。
+このデータが名前として表示される。',
+	PASSWORD VARCHAR(60) NOT NULL COMMENT 'パスワード : パスワード',
+	MAIL_ADDRESS VARCHAR(255) UNIQUE COMMENT 'メールアドレス : メールアドレス',
+	BIRTH_DATE DATE COMMENT '誕生日 : 誕生日
+時間までは考慮しない
+特に入力する必要もないのでNULLを許容する',
+	PROFILE_SENTENCE VARCHAR(200) COMMENT 'プロフィール文 : プロフィール文
+長いのも困るので300文字',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : 登録日時
+ユーザがサービスに登録した日時を格納する',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時
+',
+	PRIMARY KEY (USER_ID)
+) ENGINE = InnoDB COMMENT = '会員 : 会員テーブル' DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci
+2018-07-15 22:17:07,310 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Foreign Keys */
+
+ALTER TABLE FAVOLITE
+	ADD CONSTRAINT FK_FAVOLITE_TWEET FOREIGN KEY (TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,328 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYEE_TWEET FOREIGN KEY (REPLYEE_TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,345 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYER_TWEET FOREIGN KEY (REPLYER_TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,362 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE RETWEET
+	ADD CONSTRAINT FK_RETWEET_TWEET FOREIGN KEY (TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,379 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FAVOLITE
+	ADD CONSTRAINT FK_FAVOLITE_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,402 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FOLLOW
+	ADD CONSTRAINT FK_FOLLOWEE_USER FOREIGN KEY (FOLLOWEE_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,424 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FOLLOW
+	ADD CONSTRAINT FK_FOLLOWER_USER FOREIGN KEY (FOLLOWER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,450 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYEE_USER FOREIGN KEY (REPLYEE_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,472 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYER_USER FOREIGN KEY (REPLYER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,492 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE RETWEET
+	ADD CONSTRAINT FK_RETWEET_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,508 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE TWEET
+	ADD CONSTRAINT FK_TWEET_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:17:07,523 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=17 failure=0
+2018-07-15 22:17:07,524 [main] INFO  (DfSqlFileFireMan#fire():93) - {Create Schema}: success=17 failure=0 (in 1 files)
+2018-07-15 22:17:07,602 [main] INFO  (DfLoadDataProcess#execute():130) - 
+2018-07-15 22:17:07,602 [main] INFO  (DfLoadDataProcess#execute():131) - * * * * * * * * * * *
+2018-07-15 22:17:07,602 [main] INFO  (DfLoadDataProcess#execute():132) - *                   *
+2018-07-15 22:17:07,603 [main] INFO  (DfLoadDataProcess#execute():133) - * Load Data         *
+2018-07-15 22:17:07,603 [main] INFO  (DfLoadDataProcess#execute():134) - *                   *
+2018-07-15 22:17:07,603 [main] INFO  (DfLoadDataProcess#execute():135) - * * * * * * * * * * *
+2018-07-15 22:17:07,627 [main] INFO  (DfTakeFinallyProcess#takeFinally():237) - 
+2018-07-15 22:17:07,627 [main] INFO  (DfTakeFinallyProcess#takeFinally():238) - * * * * * * * **
+2018-07-15 22:17:07,627 [main] INFO  (DfTakeFinallyProcess#takeFinally():239) - *              *
+2018-07-15 22:17:07,628 [main] INFO  (DfTakeFinallyProcess#takeFinally():240) - * Take Finally *
+2018-07-15 22:17:07,628 [main] INFO  (DfTakeFinallyProcess#takeFinally():241) - *              *
+2018-07-15 22:17:07,628 [main] INFO  (DfTakeFinallyProcess#takeFinally():242) - * * * * * * * **
+2018-07-15 22:17:07,634 [main] INFO  (DfSqlFileFireMan#fire():68) - ...Firing: take-finally.sql
+2018-07-15 22:17:07,635 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=0 failure=0
+2018-07-15 22:17:07,635 [main] INFO  (DfSqlFileFireMan#fire():93) - {Take Finally}: success=0 failure=0 (in 1 files)
+2018-07-15 22:17:07,637 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2018-07-15 22:17:07,641 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m03s166ms
+
+  DBFLUTE_CLIENT: {twitter}
+    database  = mysql (MySQL 5.6.40)
+    language  = java
+    container = spring
+    package   = com.example.twitter.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/twitter
+    schema = {twitter.$$NoNameSchema$$ as main}
+    user   = raqwel
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Create Schema}: success=17 failure=0 (in 1 files)
+  o replace-schema.sql
+
+ {Load Data}: loaded-files=0
+  - (no data file)
+
+ {Take Finally}: success=0 failure=0 (in 1 files)
+  o take-finally.sql
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
+2018-07-15 22:44:42,658 [main] INFO  (DfReplaceSchemaTask#begin():92) - +------------------------------------------+
+2018-07-15 22:44:42,661 [main] INFO  (DfReplaceSchemaTask#begin():93) - |                                          |
+2018-07-15 22:44:42,661 [main] INFO  (DfReplaceSchemaTask#begin():94) - |              ReplaceSchema               |
+2018-07-15 22:44:42,667 [main] INFO  (DfReplaceSchemaTask#begin():102) - |                                          |
+2018-07-15 22:44:42,667 [main] INFO  (DfReplaceSchemaTask#begin():103) - +------------------------------------------+
+2018-07-15 22:44:42,668 [main] INFO  (DfReplaceSchemaTask#waitBeforeReps():401) - ...Waiting for your GO SIGN from stdin before ReplaceSchema:
+2018-07-15 22:44:44,153 [main] INFO  (DfDataSourceHandler#prepare():78) - ...Preparing data source:
+2018-07-15 22:44:44,154 [main] INFO  (DfDataSourceHandler#prepare():79) -   driver = com.mysql.jdbc.Driver
+2018-07-15 22:44:44,154 [main] INFO  (DfDataSourceHandler#prepare():80) -   url    = jdbc:mysql://localhost:3306/twitter
+2018-07-15 22:44:44,154 [main] INFO  (DfDataSourceHandler#prepare():81) -   user   = raqwel
+2018-07-15 22:44:44,164 [main] INFO  (DfDataSourceHandler#createConnection():166) - ...Connecting to database by data source:
+2018-07-15 22:44:44,465 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():233) -   product = MySQL 5.6.40
+2018-07-15 22:44:44,465 [main] INFO  (DfDataSourceHandler#setupConnectionMetaInfo():234) -   driver  = MySQL Connector Java mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e ) for JDBC 4.0
+2018-07-15 22:44:44,477 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():229) - 
+2018-07-15 22:44:44,477 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():230) - * * * * * * * * * * *
+2018-07-15 22:44:44,477 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():231) - *                   *
+2018-07-15 22:44:44,478 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():232) - * Initialize Schema *
+2018-07-15 22:44:44,479 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():233) - *                   *
+2018-07-15 22:44:44,479 [main] INFO  (DfCreateSchemaProcess#initializeSchemaMainDrop():234) - * * * * * * * * * * *
+2018-07-15 22:44:44,492 [main] INFO  (DfTableExtractor#doGetTableList():66) - ...Getting tables:
+2018-07-15 22:44:44,492 [main] INFO  (DfTableExtractor#doGetTableList():67) -   schema = {twitter.$$NoNameSchema$$ as main}
+2018-07-15 22:44:44,493 [main] INFO  (DfTableExtractor#doGetTableList():68) -   types  = [TABLE, VIEW]
+2018-07-15 22:44:44,523 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table FAVOLITE
+2018-07-15 22:44:44,534 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table FOLLOW
+2018-07-15 22:44:44,540 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table REPLY
+2018-07-15 22:44:44,545 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - truncate table RETWEET
+2018-07-15 22:44:44,567 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FAVOLITE drop foreign key FK_FAVOLITE_TWEET
+2018-07-15 22:44:44,582 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FAVOLITE drop foreign key FK_FAVOLITE_USER
+2018-07-15 22:44:44,592 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FOLLOW drop foreign key FK_FOLLOWEE_USER
+2018-07-15 22:44:44,600 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table FOLLOW drop foreign key FK_FOLLOWER_USER
+2018-07-15 22:44:44,608 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYEE_USER
+2018-07-15 22:44:44,616 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYEE_TWEET
+2018-07-15 22:44:44,623 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYER_USER
+2018-07-15 22:44:44,630 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table REPLY drop foreign key FK_REPLYER_TWEET
+2018-07-15 22:44:44,638 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table RETWEET drop foreign key FK_RETWEET_TWEET
+2018-07-15 22:44:44,645 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table RETWEET drop foreign key FK_RETWEET_USER
+2018-07-15 22:44:44,657 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - alter table TWEET drop foreign key FK_TWEET_USER
+2018-07-15 22:44:44,669 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table FAVOLITE
+2018-07-15 22:44:44,671 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table FOLLOW
+2018-07-15 22:44:44,673 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table REPLY
+2018-07-15 22:44:44,675 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table RETWEET
+2018-07-15 22:44:44,677 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table TWEET
+2018-07-15 22:44:44,682 [main] INFO  (DfSchemaInitializerJdbc#logReplaceSql():614) - drop table USER
+2018-07-15 22:44:44,701 [main] INFO  (DfCreateSchemaProcess#createSchema():266) - 
+2018-07-15 22:44:44,702 [main] INFO  (DfCreateSchemaProcess#createSchema():267) - * * * * * * * * *
+2018-07-15 22:44:44,702 [main] INFO  (DfCreateSchemaProcess#createSchema():268) - *               *
+2018-07-15 22:44:44,702 [main] INFO  (DfCreateSchemaProcess#createSchema():269) - * Create Schema *
+2018-07-15 22:44:44,702 [main] INFO  (DfCreateSchemaProcess#createSchema():270) - *               *
+2018-07-15 22:44:44,702 [main] INFO  (DfCreateSchemaProcess#createSchema():271) - * * * * * * * * *
+2018-07-15 22:44:44,706 [main] INFO  (DfSqlFileFireMan#fire():68) - ...Firing: replace-schema.sql
+2018-07-15 22:44:44,709 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Tables */
+
+CREATE TABLE FAVOLITE
+(
+	FAVOLITE_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'お気に入りID : お気に入りID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+',
+	TWEET_ID BIGINT NOT NULL COMMENT 'ツイートID : お気に入りしたツイートID
+',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : お気に入りした時間',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時
+',
+	PRIMARY KEY (FAVOLITE_ID)
+) COMMENT = 'お気に入り'
+2018-07-15 22:44:44,767 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE FOLLOW
+(
+	FOLLOW_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'フォローID : フォローID',
+	FOLLOWEE_ID BIGINT NOT NULL COMMENT 'フォロイーID : フォロイーID
+フォローする人の会員IDが入る
+',
+	FOLLOWER_ID BIGINT NOT NULL COMMENT 'フォロワーID : フォロワーID
+フォローされる人のIDが入る',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+フォローされているかをT / Fで判定する
+',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : フォローした日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (FOLLOW_ID),
+	CONSTRAINT UQ_NEW_TABLE_XXX UNIQUE (FOLLOWEE_ID, FOLLOWER_ID)
+) COMMENT = 'フォロー'
+2018-07-15 22:44:44,779 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE REPLY
+(
+	REPLY_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'リプライID : リプライID',
+	REPLYEE_ID BIGINT NOT NULL COMMENT 'リプライした会員ID : リプライした会員ID
+',
+	REPLYER_ID BIGINT NOT NULL COMMENT 'リプライされた会員ID : リプライされた会員のID',
+	REPLYEE_TWEET_ID BIGINT NOT NULL COMMENT 'リプライしたツイートID : リプライしたツイートのID
+',
+	REPLYER_TWEET_ID BIGINT NOT NULL COMMENT 'リプライされたツイートID : リプライされたツイートのID',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : リプライした日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (REPLY_ID)
+) COMMENT = 'リプライ'
+2018-07-15 22:44:44,852 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE RETWEET
+(
+	RETWEET_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'リツイートID : リツイートID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+リツイートする人の会員IDが入る
+',
+	TWEET_ID BIGINT NOT NULL COMMENT 'ツイートID : ツイートID
+リツイートされるツイートIDが格納される',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+リツイートしたかどうかを見る
+一回リツイートして辞めてもう一回リツイートをするときにTにして表示できるようにする
+',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : 登録日時',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (RETWEET_ID),
+	CONSTRAINT UQ_NEW_TABLE_XXX UNIQUE (USER_ID, TWEET_ID)
+) COMMENT = 'リツイート'
+2018-07-15 22:44:44,864 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE TWEET
+(
+	TWEET_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT 'ツイートID : ツイートID',
+	USER_ID BIGINT NOT NULL COMMENT '会員ID : 会員ID
+',
+	TWEET VARCHAR(140) NOT NULL COMMENT 'ツイート : ツイート
+140文字制限されているので最大長140に設定',
+	DEL_FLG BOOLEAN NOT NULL COMMENT '削除フラグ : 削除フラグ
+物理削除は怖いので論理削除を想定',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : ツイートした時間',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時',
+	PRIMARY KEY (TWEET_ID)
+) COMMENT = 'ツイート'
+2018-07-15 22:44:44,876 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+CREATE TABLE USER
+(
+	USER_ID BIGINT NOT NULL UNIQUE AUTO_INCREMENT COMMENT '会員ID : 会員ID',
+	USER_NAME VARCHAR(64) NOT NULL COMMENT '会員名称 : 会員名称。
+このデータが名前として表示される。',
+	PASSWORD VARCHAR(60) NOT NULL COMMENT 'パスワード : パスワード',
+	MAIL_ADDRESS VARCHAR(255) UNIQUE COMMENT 'メールアドレス : メールアドレス',
+	BIRTH_DATE DATE COMMENT '誕生日 : 誕生日
+時間までは考慮しない
+特に入力する必要もないのでNULLを許容する',
+	PROFILE_SENTENCE VARCHAR(200) COMMENT 'プロフィール文 : プロフィール文
+長いのも困るので300文字',
+	REGISTER_DATETIME DATETIME NOT NULL COMMENT '登録日時 : 登録日時
+ユーザがサービスに登録した日時を格納する',
+	UPDATE_DATETIME DATETIME NOT NULL COMMENT '更新日時 : 更新日時
+',
+	PRIMARY KEY (USER_ID)
+) ENGINE = InnoDB COMMENT = '会員 : 会員テーブル' DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci
+2018-07-15 22:44:44,968 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+/* Create Foreign Keys */
+
+ALTER TABLE FAVOLITE
+	ADD CONSTRAINT FK_FAVOLITE_TWEET FOREIGN KEY (TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,068 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYEE_TWEET FOREIGN KEY (REPLYEE_TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,083 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYER_TWEET FOREIGN KEY (REPLYER_TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,098 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE RETWEET
+	ADD CONSTRAINT FK_RETWEET_TWEET FOREIGN KEY (TWEET_ID)
+	REFERENCES TWEET (TWEET_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,116 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FAVOLITE
+	ADD CONSTRAINT FK_FAVOLITE_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,130 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FOLLOW
+	ADD CONSTRAINT FK_FOLLOWEE_USER FOREIGN KEY (FOLLOWEE_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,186 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE FOLLOW
+	ADD CONSTRAINT FK_FOLLOWER_USER FOREIGN KEY (FOLLOWER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,202 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYEE_USER FOREIGN KEY (REPLYEE_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,217 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE REPLY
+	ADD CONSTRAINT FK_REPLYER_USER FOREIGN KEY (REPLYER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,234 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE RETWEET
+	ADD CONSTRAINT FK_RETWEET_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,247 [main] INFO  (DfSqlFileRunnerBase#traceSql():168) - 
+ALTER TABLE TWEET
+	ADD CONSTRAINT FK_TWEET_USER FOREIGN KEY (USER_ID)
+	REFERENCES USER (USER_ID)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+2018-07-15 22:44:45,265 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=17 failure=0
+2018-07-15 22:44:45,265 [main] INFO  (DfSqlFileFireMan#fire():93) - {Create Schema}: success=17 failure=0 (in 1 files)
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():130) - 
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():131) - * * * * * * * * * * *
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():132) - *                   *
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():133) - * Load Data         *
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():134) - *                   *
+2018-07-15 22:44:45,343 [main] INFO  (DfLoadDataProcess#execute():135) - * * * * * * * * * * *
+2018-07-15 22:44:45,371 [main] INFO  (DfTakeFinallyProcess#takeFinally():237) - 
+2018-07-15 22:44:45,371 [main] INFO  (DfTakeFinallyProcess#takeFinally():238) - * * * * * * * **
+2018-07-15 22:44:45,372 [main] INFO  (DfTakeFinallyProcess#takeFinally():239) - *              *
+2018-07-15 22:44:45,372 [main] INFO  (DfTakeFinallyProcess#takeFinally():240) - * Take Finally *
+2018-07-15 22:44:45,372 [main] INFO  (DfTakeFinallyProcess#takeFinally():241) - *              *
+2018-07-15 22:44:45,372 [main] INFO  (DfTakeFinallyProcess#takeFinally():242) - * * * * * * * **
+2018-07-15 22:44:45,376 [main] INFO  (DfSqlFileFireMan#fire():68) - ...Firing: take-finally.sql
+2018-07-15 22:44:45,377 [main] INFO  (DfSqlFileRunnerBase#traceResult():172) -  -> success=0 failure=0
+2018-07-15 22:44:45,378 [main] INFO  (DfSqlFileFireMan#fire():93) - {Take Finally}: success=0 failure=0 (in 1 files)
+2018-07-15 22:44:45,379 [main] INFO  (DfDataSourceHandler#destroy():120) - ...closeReally()
+2018-07-15 22:44:45,383 [main] INFO  (DfDBFluteTaskUtil#logFinalMessage():139) - 
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+[Final Message]: 00m02s741ms
+
+  DBFLUTE_CLIENT: {twitter}
+    database  = mysql (MySQL 5.6.40)
+    language  = java
+    container = spring
+    package   = com.example.twitter.dbflute
+
+  DBFLUTE_ENVIRONMENT_TYPE: {}
+    driver = com.mysql.jdbc.Driver
+    url    = jdbc:mysql://localhost:3306/twitter
+    schema = {twitter.$$NoNameSchema$$ as main}
+    user   = raqwel
+    props  = {}
+    additionalSchema = 
+    repsEnvType      = ut
+    refreshProject   = $$AutoDetect$$
+
+ {Create Schema}: success=17 failure=0 (in 1 files)
+  o replace-schema.sql
+
+ {Load Data}: loaded-files=0
+  - (no data file)
+
+ {Take Finally}: success=0 failure=0 (in 1 files)
+  o take-finally.sql
+_/_/_/_/_/_/_/_/_/_/ {ReplaceSchema}
